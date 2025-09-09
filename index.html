@@ -22,16 +22,9 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section id="hero" class="hero active">
-    <img src="Chiddu.jpg" alt="Chidananda" class="profile-pic">
-    <h1>Hello, I'm <span>Chidananda</span></h1>
-    <p>Aspiring Computer Science Engineer | Web & Software Developer</p>
-    <a href="#contact" class="btn">Contact Me</a>
-  </section>
-
-  <!-- About -->
+  <!-- Sections -->
   <section id="about" class="section card">
+    <img src="Chiddu.jpg" alt="Chidananda" class="profile-pic">
     <h2>About Me</h2>
     <p>
       I am a Computer Science Engineering student passionate about coding,
@@ -39,7 +32,6 @@
     </p>
   </section>
 
-  <!-- Skills -->
   <section id="skills" class="section card">
     <h2>Skills</h2>
     <div class="skills-container">
@@ -52,7 +44,6 @@
     </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects" class="section card">
     <h2>Projects</h2>
     <div class="projects-container">
@@ -62,7 +53,6 @@
     </div>
   </section>
 
-  <!-- Certifications -->
   <section id="certification" class="section card">
     <h2>Certifications</h2>
     <ul>
@@ -72,14 +62,12 @@
     </ul>
   </section>
 
-  <!-- Education -->
   <section id="education" class="section card">
     <h2>Education</h2>
     <p><b>Pre-University in PCMB</b><br>Govt PU College Kanyana (2021–2022)</p>
     <p><b>Bachelor of Engineering in CSE</b><br>VCET (2023–2027)</p>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="section card">
     <h2>Contact</h2>
     <p>📞 +91 7483166342</p>
@@ -88,25 +76,28 @@
     <p>💻 <a href="https://github.com/">GitHub</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Chidananda | All Rights Reserved</p>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- JS for section switching -->
   <script>
     function showSection(id) {
+      // hide all
       document.querySelectorAll("section").forEach(sec => {
-        sec.classList.remove("active");
+        sec.style.display = "none";
       });
-      document.getElementById(id).classList.add("active");
+      // show selected
+      document.getElementById(id).style.display = "block";
     }
 
-    // Default section = About
+    // default: show About
     window.onload = function() {
       showSection("about");
     };
 
-    // Navbar links
+    // handle navbar clicks
     document.querySelectorAll("nav ul li a").forEach(link => {
       link.addEventListener("click", function(e) {
         e.preventDefault();
