@@ -60,6 +60,7 @@ nav ul li a:hover {
   align-items: center;
   text-align: center;
 }
+
 /* Profile Photo */
 .profile-pic {
   width: 180px;
@@ -70,7 +71,6 @@ nav ul li a:hover {
   margin-bottom: 20px;
   object-fit: cover;
 }
-
 
 .hero h1 {
   font-size: 48px;
@@ -101,6 +101,17 @@ nav ul li a:hover {
 }
 
 /* Section Card Style */
+section {
+  display: none; /* hidden by default */
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+section.active {
+  display: block;
+  opacity: 1;
+}
+
 .section {
   padding: 60px 10%;
   text-align: center;
