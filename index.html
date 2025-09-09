@@ -12,7 +12,6 @@
     <nav>
       <h2 class="logo">Chidananda</h2>
       <ul>
-        <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -28,7 +27,7 @@
     <img src="Chiddu.jpg" alt="Chidananda" class="profile-pic">
     <h1>Hello, I'm <span>Chidananda</span></h1>
     <p>Aspiring Computer Science Engineer | Web & Software Developer</p>
-    <a href="#contact" class="btn">Contact Me</a>
+    <a href="#contact" class="btn" id="contactBtn">Contact Me</a>
   </section>
 
   <!-- About -->
@@ -93,30 +92,35 @@
     <p>© 2025 Chidananda | All Rights Reserved</p>
   </footer>
 
-  <!-- JS for section switching -->
+  <!-- JavaScript -->
   <script>
     function showSection(id) {
-      // hide all
+      // Hide hero + all sections
       document.querySelectorAll("section").forEach(sec => {
         sec.style.display = "none";
       });
-      // show selected
+      // Show selected section
       document.getElementById(id).style.display = "block";
     }
 
-    // default: show Hero + About
+    // Show hero by default
     window.onload = function() {
       showSection("hero");
-      document.getElementById("about").style.display = "block";
     };
 
-    // handle navbar clicks
+    // Navbar click handling
     document.querySelectorAll("nav ul li a").forEach(link => {
       link.addEventListener("click", function(e) {
         e.preventDefault();
         const targetId = this.getAttribute("href").substring(1);
         showSection(targetId);
       });
+    });
+
+    // Contact button in hero
+    document.getElementById("contactBtn").addEventListener("click", function(e) {
+      e.preventDefault();
+      showSection("contact");
     });
   </script>
 </body>
