@@ -22,8 +22,8 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Hero -->
+  <section id="hero" class="hero active">
     <img src="Chiddu.jpg" alt="Chidananda" class="profile-pic">
     <h1>Hello, I'm <span>Chidananda</span></h1>
     <p>Aspiring Computer Science Engineer | Web & Software Developer</p>
@@ -83,7 +83,7 @@
   <section id="contact" class="section card">
     <h2>Contact</h2>
     <p>📞 +91 7483166342</p>
-    <p>✉️ chidandakanyana@gmail.com</p>
+    <p>✉ chidandakanyana@gmail.com</p>
     <p>🌐 <a href="https://linkedin.com/in/chidananda-kanyana-1b57a32a1">LinkedIn</a></p>
     <p>💻 <a href="https://github.com/">GitHub</a></p>
   </section>
@@ -91,6 +91,29 @@
   <footer>
     <p>© 2025 Chidananda | All Rights Reserved</p>
   </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => {
+        sec.classList.remove("active");
+      });
+      document.getElementById(id).classList.add("active");
+    }
+
+    // Default section = About
+    window.onload = function() {
+      showSection("about");
+    };
+
+    // Navbar links
+    document.querySelectorAll("nav ul li a").forEach(link => {
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        showSection(targetId);
+      });
+    });
+  </script>
 </body>
 </html>
-
