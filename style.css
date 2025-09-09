@@ -53,7 +53,6 @@ nav ul li a:hover {
 
 /* Hero */
 .hero {
-  display: none;   /* hidden by default */
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -62,7 +61,6 @@ nav ul li a:hover {
   text-align: center;
 }
 
-/* Profile Photo */
 .profile-pic {
   width: 180px;
   height: 180px;
@@ -103,9 +101,9 @@ nav ul li a:hover {
 
 /* Section Card Style */
 .section {
-  display: none;  /* all sections hidden by default */
   padding: 60px 10%;
   text-align: center;
+  display: none; /* hidden by default */
 }
 
 .card {
