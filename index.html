@@ -12,6 +12,7 @@
     <nav>
       <h2 class="logo">Chidananda</h2>
       <ul>
+        <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -22,11 +23,11 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero / Home -->
   <section id="hero" class="hero">
     <img src="Chiddu.jpg" alt="Chidananda" class="profile-pic">
     <h1>Hello, I'm <span>Chidananda</span></h1>
-    <p>Aspiring Computer Science Engineer | Web & Software Developer</p>
+    <p class="tagline">Aspiring Computer Science Engineer | Web & Software Developer</p>
     <a href="#contact" class="btn" id="contactBtn">Contact Me</a>
   </section>
 
@@ -84,10 +85,11 @@
     <h2>Contact</h2>
     <p>📞 +91 7483166342</p>
     <p>✉ chidandakanyana@gmail.com</p>
-    <p>🌐 <a href="https://linkedin.com/in/chidananda-kanyana-1b57a32a1">LinkedIn</a></p>
-    <p>💻 <a href="https://github.com/">GitHub</a></p>
+    <p>🌐 <a href="https://linkedin.com/in/chidananda-kanyana-1b57a32a1" target="_blank">LinkedIn</a></p>
+    <p>💻 <a href="https://github.com/" target="_blank">GitHub</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Chidananda | All Rights Reserved</p>
   </footer>
@@ -95,20 +97,18 @@
   <!-- JavaScript -->
   <script>
     function showSection(id) {
-      // Hide hero + all sections
       document.querySelectorAll("section").forEach(sec => {
         sec.style.display = "none";
       });
-      // Show selected section
       document.getElementById(id).style.display = "block";
     }
 
-    // Show hero by default
+    // Show Home by default
     window.onload = function() {
       showSection("hero");
     };
 
-    // Navbar click handling
+    // Navbar links
     document.querySelectorAll("nav ul li a").forEach(link => {
       link.addEventListener("click", function(e) {
         e.preventDefault();
@@ -117,7 +117,7 @@
       });
     });
 
-    // Contact button in hero
+    // Contact button inside hero
     document.getElementById("contactBtn").addEventListener("click", function(e) {
       e.preventDefault();
       showSection("contact");
