@@ -51,20 +51,15 @@ nav ul li a:hover {
   color: #00c3ff;
 }
 
-/* Sections */
-section {
-  display: none; /* hidden by default */
-  padding: 60px 10%;
+/* Hero */
+.hero {
+  display: none;   /* hidden by default */
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-}
-
-.card {
-  background: rgba(255,255,255,0.05);
-  border-radius: 15px;
-  padding: 40px;
-  margin: 30px auto;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  max-width: 800px;
 }
 
 /* Profile Photo */
@@ -76,6 +71,49 @@ section {
   box-shadow: 0 4px 20px rgba(0,0,0,0.5);
   margin-bottom: 20px;
   object-fit: cover;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero span {
+  color: #00c3ff;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.hero .btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #00c3ff;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #0099cc;
+}
+
+/* Section Card Style */
+.section {
+  display: none;  /* all sections hidden by default */
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 40px;
+  margin: 30px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 /* Skills */
